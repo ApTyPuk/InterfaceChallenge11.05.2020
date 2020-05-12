@@ -14,8 +14,15 @@ public class Main {
         System.out.println(tim);
         tim.setWeapon("Strombringer");
         saveObject(tim);
-        loadObject(tim);
+//        loadObject(tim);
         System.out.println(tim);
+
+        ISaveable werewolf = new Monster("Werewolf", 20, 40);
+
+        System.out.println("Strength = " + ((Monster) werewolf).getStrength()); //casting a Monster class. without casting it won't work
+
+        System.out.println(werewolf);
+        saveObject(werewolf);
 
     }
 
